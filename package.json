@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "makan-dulu-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micheunderscore/makan-dulu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micheunderscore/makan-dulu/issues"
+  },
+  "homepage": "https://github.com/micheunderscore/makan-dulu#readme",
+  "workspaces": [
+    "packages/*"
+  ]
+}
