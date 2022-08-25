@@ -1,49 +1,21 @@
 import React, { useState } from "react";
-import {
-  Button,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleProp,
-  Text,
-  useColorScheme,
-  View,
-  ViewStyle,
-} from "react-native";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import { Button, StyleProp, Text, View, ViewStyle } from "react-native";
 
 export const App = () => {
   const [count, setCount] = useState(0);
-  const isDarkMode = useColorScheme() === "dark";
+  // const isDarkMode = useColorScheme() === "dark";
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    flex: 1,
-  };
-
-  const bgContainerStyle: StyleProp<ViewStyle> = {
+  const backgroundStyle: StyleProp<ViewStyle> = {
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? "light-content" : "dark-content"} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}
-        contentContainerStyle={bgContainerStyle}
-      >
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}
-        >
-          <Text>{count}</Text>
-          <Button title="Increment" onPress={() => setCount(count + 1)} />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <View style={backgroundStyle}>
+      <Text>{count}</Text>
+      Hello World!
+      <Button title="Increment" onPress={() => setCount(count + 1)} />
+    </View>
   );
 };
