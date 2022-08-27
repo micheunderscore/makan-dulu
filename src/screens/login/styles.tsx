@@ -1,0 +1,62 @@
+import { StyleSheet } from "react-native";
+
+export const styles = StyleSheet.create({
+  container: {
+    width: "100vw",
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  card: {
+    margin: "1rem",
+    padding: "1.5rem",
+    textAlign: "center",
+    color: "inherit",
+    border: "1px solid #eaeaea",
+    borderRadius: 10,
+    transition: "color 0.15s ease, border-color 0.15s ease",
+  },
+  title: {
+    margin: "4rem 0",
+    lineHeight: 1.15,
+    fontSize: 20,
+    textAlign: "center",
+  },
+  inputContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "2.6rem",
+    marginBottom: "1rem",
+  },
+  input: {
+    fontSize: 20,
+    padding: "0 0.5rem",
+    maxWidth: "300px",
+    borderWidth: 1,
+    borderColor: "lightgray",
+    borderTopLeftRadius: 5,
+    borderBottomLeftRadius: 5,
+    height: "100%",
+  },
+  myShopify: {
+    backgroundColor: "lightgray",
+    height: "100%",
+    padding: "0 .5rem",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    borderTopRightRadius: 5,
+    borderBottomRightRadius: 5,
+  },
+  button: {
+    backgroundColor: "#0070f3",
+    color: "white",
+    width: "100%",
+    borderRadius: 5,
+    padding: "0.8rem 0",
+    fontWeight: "bold",
+  },
+});

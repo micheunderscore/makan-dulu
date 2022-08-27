@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "CommonJS",
+    "module": "esnext",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "resolveJsonModule": true,
@@ -14,12 +14,13 @@
     "jsx": "preserve",
     "incremental": true,
     "sourceMap": true,
-    "outDir": "dist",
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"],
       "root/*": ["./*"],
-      "context/*": ["src/context/*"]
+      "context/*": ["./src/utils/*"],
+      "screens/*": ["./src/screens/*"],
+      "webhooks/*": ["./src/webhooks/*"]
     },
     "allowJs": true,
     "strict": false

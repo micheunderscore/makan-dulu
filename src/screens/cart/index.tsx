@@ -1,44 +1,11 @@
 import React from "react";
-import {
-  FlatList,
-  Linking,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    flexGrow: 1,
-    justifyContent: "center",
-  },
-  text: {
-    alignItems: "center",
-    fontSize: 24,
-    marginBottom: 24,
-  },
-  link: {
-    color: "blue",
-  },
-});
+import { FlatList, Linking, Text, TouchableOpacity, View } from "react-native";
+import { styles } from "./styles";
 
 const outString: string[] = [];
 for (let i = 0; i < 100; i++) outString.push(`${i}`);
 
-interface MyResponseBodyType {
-  products(first: 10): {
-    edges: {
-      node: {
-        description: string;
-        title: string;
-      };
-    };
-  };
-}
-
-const Alternate: React.FC = () => {
+export const CartScreen: React.FC = () => {
   return (
     <View style={styles.container}>
       <Text accessibilityRole="header" style={styles.text}>
@@ -57,5 +24,3 @@ const Alternate: React.FC = () => {
     </View>
   );
 };
-
-export default Alternate;
