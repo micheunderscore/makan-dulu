@@ -1,21 +1,8 @@
-import { StyleSheet } from "react-native";
+import tailwind from "tailwind-rn";
 
-export const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    flexGrow: 1,
-    justifyContent: "center",
-  },
-  link: {
-    color: "blue",
-  },
-  textContainer: {
-    alignItems: "center",
-    marginTop: 16,
-  },
-  text: {
-    alignItems: "center",
-    fontSize: 24,
-    marginBottom: 24,
-  },
-});
+export const styles = {
+  container: tailwind("items-center justify-center "),
+  textContainer: tailwind("items-center mt-10"),
+  text: tailwind("items-center text-2xl mb-6"),
+  link: tailwind("text-primary"),
+};

@@ -1,29 +1,25 @@
 {
   "compilerOptions": {
+    "composite": false,
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "noImplicitAny": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "*": ["node_modules/*"],
       "root/*": ["./*"],
-      "context/*": ["./src/utils/*"],
-      "screens/*": ["./src/screens/*"],
-      "webhooks/*": ["./src/webhooks/*"]
+      "screens/*": ["./src/screens/*"]
     },
-    "allowJs": true,
-    "strict": false
+    "forceConsistentCasingInFileNames": false
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
