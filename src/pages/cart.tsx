@@ -1,4 +1,4 @@
-import { CartScreen } from "screens/cart";
+import { CartScreen } from "screens/Cart";
 
 const Cart: React.FC = () => <CartScreen />;
 

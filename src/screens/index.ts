@@ -1,3 +1,4 @@
-export * from "./cart";
-export * from "./home";
-export * from "./login";
+export * from "./Cart";
+export * from "./Home";
+export * from "./Product";
+export * from "./Search";

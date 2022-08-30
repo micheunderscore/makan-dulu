@@ -17,7 +17,11 @@
     "baseUrl": ".",
     "paths": {
       "root/*": ["./*"],
-      "screens/*": ["./src/screens/*"]
+      "theme/*": ["./src/theme/*"],
+      "screens/*": ["./src/screens/*"],
+      "screens": ["./src/screens/"],
+      "components/*": ["./src/components/*"],
+      "components": ["./src/components/"]
     },
     "forceConsistentCasingInFileNames": false
   },

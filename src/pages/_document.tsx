@@ -18,6 +18,10 @@ const normalizeNextElements = `
   }
 `;
 
+if (typeof window !== "undefined") {
+  var style = document.createElement("style");
+  style.innerHTML = `body::-webkit-scrollbar {display: none;}`;
+}
 export default class MyDocument extends Document {
   static getInitialProps = async ({
     renderPage,
@@ -31,6 +35,7 @@ export default class MyDocument extends Document {
         key={"style"}
         dangerouslySetInnerHTML={{ __html: normalizeNextElements }}
       />,
+      style ?? [],
       getStyleElement(),
     ];
     return { ...page, styles: Children.toArray(styles) };

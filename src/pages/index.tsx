@@ -1,5 +1,5 @@
-import { HomeScreen } from "screens/home";
+import { HomeScreen } from "screens/Home";
 
-const Home = () => <HomeScreen />;
+const Home: React.FC = () => <HomeScreen />;
 
 export default Home;

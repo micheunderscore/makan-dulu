@@ -1,24 +1,50 @@
-import { Linking, Text, TouchableOpacity, View } from "react-native";
+import { ProductCard } from "components";
+import { FlatList, Image, ImageBackground, Text, View } from "react-native";
+import products from "root/public/products.json";
 import { styles } from "./styles";
 
 export const HomeScreen: React.FC = (props) => {
+  const formattedProducts = products.map((product) => ({
+    title: product["Title"],
+    tags: product["Tags"],
+    imgsrc: product["Image Src"],
+    handle: product["Handle"],
+    type: product["Custom Product Type"],
+    price: product["Variant Price"],
+  }));
+
   return (
-    <View style={styles.container}>
-      <Text accessibilityRole="header" style={styles.text}>
-        React Native for Web & Next.js
-      </Text>
-
-      <TouchableOpacity onPress={() => Linking.openURL(`/cart`)}>
-        <Text style={styles.link} accessibilityRole="link">
-          A universal link
+    <ImageBackground
+      source={{ uri: "/bg-pattern.jpg" }}
+      resizeMode={"repeat"}
+      style={styles.container.root}
+    >
+      <View style={styles.container.text}>
+        <Text style={styles.text.title}>
+          Order your next favourite meal and{" "}
+          <Image
+            source={{ uri: "/MakanDuluText.png" }}
+            style={styles.logo.text}
+          />
         </Text>
-      </TouchableOpacity>
-
-      <View style={styles.textContainer}>
-        <Text accessibilityRole="header" aria-level="2" style={styles.text}>
-          Subheader
+        <Text style={styles.text.subtitle}>
+          Or maybe even try something new?
         </Text>
       </View>
-    </View>
+      <FlatList
+        style={styles.flatlist.root}
+        contentContainerStyle={styles.flatlist.container}
+        data={formattedProducts}
+        numColumns={6}
+        renderItem={({ item, index }) => (
+          <ProductCard {...item} index={index} />
+        )}
+      />
+      <View style={styles.container.footer}>
+        <Text style={styles.text.copyright}>
+          Ⓜ️​ Makanrights of Makan Dulu Sdn. Bhd.
+        </Text>
+      </View>
+    </ImageBackground>
   );
 };
