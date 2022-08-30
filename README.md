@@ -15,3 +15,5 @@
 - [ ] Complete the project within 7 days
 - [ ] Some sort of offline & sync capability
 - [ ] Use TDD for Frontend development
+
+_Author: Muhammad Iqbal Asim_
